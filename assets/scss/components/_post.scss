@@ -1,0 +1,20 @@
+.post {
+
+	&.card {
+		padding-bottom: 0;
+		border-left: $global-left-border;
+	}
+}
+
+#content {
+
+	&.background-white {
+
+		.post {
+
+			&.card {
+				background-color: $light-gray;
+			}
+		}
+	}
+}

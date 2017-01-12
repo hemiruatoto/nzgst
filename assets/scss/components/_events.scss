@@ -1,0 +1,203 @@
+.single-event {
+
+	#content {
+
+		@include breakpoint(medium down) {
+			padding-top: 0;
+		}
+	}
+
+	#comments {
+		margin-top: 0;
+	}
+}
+
+.event {
+
+	.article-header {
+		position: relative;
+		padding: 10rem 2rem 2rem;
+		background-size: cover;
+		background-position: center center;
+		text-shadow: 0px 0px 10px #333;
+
+		@include breakpoint(small only) {
+			padding: 6rem 1rem 1rem;
+		}
+
+		.entry-title {
+			margin: 0;
+			padding: 0;
+			color: $white;
+			border: none;
+		}
+
+		.post-type {
+			position: relative;
+			top: 0.8rem;
+			color: lighten($primary-color, 20%);
+			font-family: $header-font-family;
+			font-size: 1.5rem;
+			font-weight: 700;
+
+			@include breakpoint(small only) {
+				top: 0.4rem;
+				font-size: 1rem;
+			}
+		}
+
+		.post-meta {
+			padding: 0;
+			color: $white;
+			background-color: transparent;
+			border: none;
+			box-shadow: none;
+
+			a {
+				color: lighten($primary-color, 20%);
+			}
+		}
+
+		.back {
+			position: absolute;
+			top: 2rem;
+			left: 0;
+			padding: 0.75rem 1.5rem 0.75rem 0.75rem;
+			color: $white;
+			font-size: 0.8rem;
+			font-family: $header-font-family;
+			font-weight: $global-weight-normal;
+			text-shadow: none;
+			background-color: $primary-color;
+
+			@include breakpoint(small only) {
+				top: 1rem;
+			}
+
+			&:hover,
+			&:focus,
+			&:active {
+				text-decoration: none;
+				background-color: darken($primary-color, 5%);
+			}
+
+			i {
+				margin-right: 0.5rem;
+			}
+		}
+	}
+
+	.entry-content {
+
+		.info-section {
+			margin-bottom: 2rem;
+
+			h1 {
+				color: $primary-color;
+				font-size: 1rem;
+			}
+		}
+		
+		address.contact {
+			font-style: normal;		// Stop from being italics 
+		}
+
+		.dates {
+
+			ul {
+				margin-left: 0;
+				list-style: none;
+
+				li {
+					margin-bottom: 0.5rem;
+					font-size: 1.4rem;
+				}
+			}
+		}
+
+		.prices {
+			margin-bottom: 0;
+
+			.ticket {
+				margin-bottom: 2rem;
+				padding: 1rem;
+				background-color: $light-gray;
+				border-left: $global-left-border;
+				border-radius: $global-radius;
+				box-shadow: $global-shadow;
+
+				.name {
+					font-size: 1.2rem;
+				}
+
+				.description {
+					font-size: 0.8rem;
+				}
+
+				.price {
+					margin-bottom: 0;
+					font-family: $header-font-family;
+					font-size: 1.4rem;
+					font-weight: $global-weight-bold;
+				}
+			}
+		}
+
+		.location {
+
+			p {
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	.article-footer {
+
+		.next-prev-links {
+			margin-top: 2rem;
+
+			a {
+
+				@include breakpoint(small only) {
+					font-size: 0.85rem;
+				}
+			}
+		}
+	}
+}
+
+@include breakpoint(medium up) {
+	.event {
+
+		&.card {
+			padding-bottom: 0;
+
+			.card-image {
+				position: absolute;
+				top: 0px;
+				right: 70%;
+				bottom: 0px;
+				left: 0px;
+				width: auto;
+				padding-bottom: 0;
+			}
+
+			.card-info {
+				float: right;
+				width: 70%;
+
+				.card-body {
+
+					.meta {
+						display: inline-block;
+						margin-right: 0.5rem;
+					}
+				}
+
+				.card-footer {
+					position: static;
+				}
+			}
+		}
+	}
+}

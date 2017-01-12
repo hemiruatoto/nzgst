@@ -1,0 +1,82 @@
+#content {
+	padding: 4rem 0;
+
+	@include breakpoint(small only) {
+		padding: 2rem 0;
+	}
+
+	&.background-white {
+		background-color: $white;
+
+		.page-title,
+		.entry-title {
+			border-color: $light-gray;
+		}
+	}
+}
+
+.article-header,
+.page-header {
+	margin-bottom: 2rem;
+
+	@include breakpoint(small only) {
+		margin-bottom: 1rem;
+	}
+
+	.page-title,
+	.entry-title {
+		padding-bottom: 1rem;
+		border-bottom: 3px solid darken($light-gray, 7%);
+	}
+
+	.post-meta {
+		display: inline-block;
+		margin-top: 0.5rem;
+		padding: 0.5rem 1rem;
+		color: $black;
+		font-size: 0.8rem;
+		background-color: $light-gray;
+		border-left: $global-left-border;
+		border-radius: $global-radius;
+		box-shadow: $global-shadow;
+	}
+
+	.description {
+		color: $dark-gray;
+	}
+}
+
+.pagination {
+	margin-bottom: 2rem;
+	text-align: center;
+
+	li {
+		font-size: 1.5rem;
+
+		@include breakpoint(small only) {
+			display: inline-block;
+			font-size: 1rem;
+		}
+	}
+}
+
+blockquote {
+	position: relative;
+	margin: 2rem;
+	padding: 1.5rem 1.5rem 1rem 2rem;
+	color: $black;
+	font-style: italic;
+	background-color: $light-gray;
+	border-left: 5px solid $primary-color;
+	border-radius: $global-radius;
+	box-shadow: $global-shadow;
+
+	@include breakpoint(small only) {
+		margin: 2rem 1rem;
+		padding: 1.5rem 1rem 1rem 1.5rem;
+	}
+
+	p {
+		color: $black;
+	}
+}

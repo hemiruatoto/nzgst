@@ -1,0 +1,56 @@
+.comments-area {
+	margin-top: 4rem;
+
+	@include breakpoint(small only) {
+		margin-top: 2rem;
+	}
+
+	.commentlist {
+		margin-bottom: 4rem;
+
+		@include breakpoint(small only) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	.comment {
+		padding: 1.5rem 1.5rem 0;
+		background-color: $light-gray;
+		border-left: $global-left-border;
+		border-radius: $global-radius;
+		box-shadow: $global-shadow;
+
+		@include breakpoint(small only) {
+			padding: 0.7rem 0.7rem 0;
+		}
+
+		.avatar {
+
+			@include breakpoint(small only) {
+				width: 50px;
+			}
+		}
+	}
+
+	.comment-respond {
+		padding: 2rem 3rem 1rem;
+		background-color: $light-gray;
+		border-left: $global-left-border;
+		border-radius: $global-radius;
+		box-shadow: $global-shadow;
+
+		@include breakpoint(small only) {
+			padding: 1rem;
+		}
+
+		.button {
+
+			&.large {
+
+				@include breakpoint(small only) {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+}

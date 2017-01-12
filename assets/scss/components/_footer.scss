@@ -1,0 +1,32 @@
+.footer {
+	clear: both;
+	padding: 2rem 1rem 0.3rem;
+	color: $white;
+	font-family: $header-font-family;
+	font-size: 0.8rem;
+	font-weight: 400;
+	text-align: center;
+	background-color: $primary-color;
+
+	a {
+		color: $white;
+	}
+
+	.menu {
+		margin-bottom: 1rem;
+		text-align: center;
+
+		li {
+			display: inline-block;
+		}
+	}
+
+	.copyright {
+		color: darken($primary-color, 30%);
+		font-size: 0.7rem;
+
+		a {
+			color: darken($primary-color, 20%);
+		}
+	}
+}

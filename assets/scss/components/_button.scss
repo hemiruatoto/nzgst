@@ -1,0 +1,46 @@
+.button {
+	font-weight: 400;
+	text-transform: capitalize;
+	text-decoration: none;
+
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none;
+	}
+
+	&.margin-right {
+		margin-right: 1rem;
+
+		@include breakpoint(small only) {
+			margin-right: 0;
+		}
+	}
+
+	&.xlarge {
+
+		@include breakpoint(medium down) {
+			font-size: 1.25rem;
+		}
+
+		@include breakpoint(small only) {
+			display: block;
+			margin-bottom: 1rem;
+		}
+	}
+
+	.fa {
+		margin-left: 0.6rem;
+
+		&.icon-left {
+			margin-left: 0;
+			margin-right: 0.6rem;
+		}
+	}
+
+	&.link {
+		color: $anchor-color;
+		background-color: transparent;
+		border: none;
+	}
+}

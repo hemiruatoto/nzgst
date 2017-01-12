@@ -1,0 +1,165 @@
+.single-author {
+
+	#content {
+
+		@include breakpoint(medium down) {
+			padding-top: 0;
+		}
+	}
+
+	#comments {
+		margin-top: 0;
+	}
+}
+
+.author {
+
+	.article-header {
+		position: relative;
+		overflow: visible;
+		margin-bottom: 6rem;
+		padding: 10rem 2rem 2rem;
+		background-size: cover;
+		background-position: center center;
+		text-shadow: 0px 0px 10px #333;
+
+		@include breakpoint(small only) {
+			padding: 6rem 1rem 1rem;
+		}
+
+		.header-content {
+			position: relative;
+			left: calc(200px + 2rem);
+		}
+
+		.profile-photo {
+			position: absolute;
+			height: 200px;
+			width: 200px;
+			background-image: url('assets/images/default-profile.jpg');
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+			border: 0.5rem solid $white;
+			border-radius: $global-radius;
+			box-shadow: $global-shadow;
+
+			@include breakpoint(medium down) {
+				height: 100px;
+				width: 100px;
+			}
+		}
+
+		.display-name {
+			margin: 0;
+			padding: 0;
+			color: $white;
+			border: none;
+		}
+
+		.storyteller-meta {
+			padding: 0;
+			color: $white;
+			font-size: 1rem;
+			background-color: transparent;
+			border: none;
+			box-shadow: none;
+
+			a {
+				color: lighten($primary-color, 20%);
+			}
+		}
+
+		.back {
+			position: absolute;
+			top: 2rem;
+			left: 0;
+			padding: 0.75rem 1.5rem 0.75rem 0.75rem;
+			color: $white;
+			font-size: 0.8rem;
+			font-family: $header-font-family;
+			font-weight: $global-weight-normal;
+			text-shadow: none;
+			background-color: $primary-color;
+
+			@include breakpoint(small only) {
+				top: 1rem;
+			}
+
+			&:hover,
+			&:focus,
+			&:active {
+				text-decoration: none;
+				background-color: darken($primary-color, 5%);
+			}
+
+			i {
+				margin-right: 0.5rem;
+			}
+		}
+	}
+
+	.entry-content {
+
+		.info-section {
+			margin-bottom: 2rem;
+
+			h1 {
+				color: $primary-color;
+				font-size: 1rem;
+			}
+		}
+		
+		address.contact {
+			font-style: normal;		// Stop from being italics 
+		}
+
+		.social-media {
+
+			.social-link {
+				margin-right: 0.5rem;
+				font-size: 3rem;
+
+				&.facebook {
+					color: $facebook-blue;
+
+					&:hover,
+					&:focus,
+					&:active {
+						color: darken($facebook-blue, 10%);
+					}
+				}
+
+				&.twitter {
+					color: $twitter-blue;
+
+					&:hover,
+					&:focus,
+					&:active {
+						color: darken($twitter-blue, 10%);
+					}
+				}
+
+				&.google {
+					color: $google-red;
+
+					&:hover,
+					&:focus,
+					&:active {
+						color: darken($google-red, 10%);
+					}
+				}
+
+				&.linkedin {
+					color: $linkedin-blue;
+
+					&:hover,
+					&:focus,
+					&:active {
+						color: darken($linkedin-blue, 10%);
+					}
+				}
+			}
+		}
+	}
+}

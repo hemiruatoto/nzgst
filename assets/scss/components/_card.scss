@@ -1,0 +1,63 @@
+ .card {
+	position: relative;
+	overflow: auto;
+	margin-bottom: 2rem;
+	padding-bottom: 4rem;
+	background-color: $white;
+	border-radius: $global-radius;
+	box-shadow: $global-shadow;
+
+	.card-image {
+		width: 100%;
+		padding-bottom: 75%;
+		background-image: url('../images/default-profile-image.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.card-info {
+		overflow: auto;
+		padding: 2rem;
+	}
+
+	.card-header {
+		margin-bottom: 0.4rem;
+		border-bottom: 1px solid $medium-gray;
+
+		h1.heading {
+			margin-bottom: 0.25rem;
+			font-size: 1.3rem;
+		}
+	}
+
+	.card-body {
+
+		.meta {
+			margin-bottom: 0.6rem;
+			color: $dark-gray;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 0.9rem;
+			font-weight: 400;
+		}
+
+		.description {
+			font-size: 0.8rem;
+		}
+	}
+
+	.card-footer {
+		position: absolute;
+		left: 2rem;
+		right: 2rem;
+		bottom: 2rem;
+
+		.button {
+			margin-bottom: 0;
+
+			@include breakpoint(small only) {
+				display: block;
+			}
+		}
+	}
+}

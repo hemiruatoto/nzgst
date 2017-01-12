@@ -1,0 +1,122 @@
+.page-section {
+	margin-bottom: 4rem;
+
+	@include breakpoint(medium down) {
+		margin-bottom: 2rem;
+	}
+
+	.section-header {
+		margin-bottom: 2rem;
+	}
+
+	.section-title {
+		color: $primary-color;
+
+		&.small {
+			font-size: 1.8rem;
+
+			@include breakpoint(small only) {
+				font-size: 1.3rem;
+			}
+		}
+
+		&.divider {
+			padding-bottom: 1rem;
+			border-bottom: 3px solid darken($light-gray, 5%);
+		}
+	}
+
+	.section-content {
+
+		&.text-large {
+			font-size: 1.5rem;
+
+			@include breakpoint(small only) {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.section-footer {
+		padding-top: 2rem;
+		border-top: 3px solid darken($light-gray, 5%);
+
+		.button {
+
+			@include breakpoint(small only) {
+				display: block;
+				width: 100%;
+				font-size: 1.25rem;
+			}
+		}
+	}
+
+	.call-to-action {
+		
+	}
+
+	.sort-by {
+
+		.text,
+		.sort {
+			margin-right: 0.5rem;
+			font-family: $header-font-family;
+			font-size: 0.8rem;
+			font-weight: 400;
+		}
+
+		.text {
+			color: $dark-gray;
+		}
+
+		.sort {
+			padding-right: 0.5rem;
+			color: $black;
+			border-right: 2px solid $medium-gray;
+
+			&:last-child {
+				margin-right: 0;
+				padding-right: 0;
+				border-right: none;
+			}
+		}
+	}
+}
+
+.section-background {
+	padding: 8rem 1rem 10rem;
+	background: linear-gradient(rgba(10, 46, 49, 0.8), rgba(10, 46, 49, 0.8)),
+							url('../images/background-images/background01.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+
+	@include breakpoint(large down) {
+		padding: 6rem 1rem 7.5rem;
+	}
+
+	@include breakpoint(medium down) {
+		padding: 5rem 1rem 6rem;
+	}
+
+	@include breakpoint(small only) {
+		padding: 4rem 1rem;
+	}
+
+	&.margin-bottom {
+		margin-bottom: 8rem;
+
+		@include breakpoint(medium down) {
+			margin-bottom: 4rem;
+		}
+	}
+	
+	.page-section {
+		margin-bottom: 0;
+
+		.section-title,
+		.section-content {
+			color: $white;
+		}
+	}
+}
