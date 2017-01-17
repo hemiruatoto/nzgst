@@ -4577,6 +4577,21 @@ to display none.
         .card .card-footer .button {
           display: block; } }
 
+.modal {
+  padding: 0;
+  background-color: #fefefe;
+  border-radius: 0.4rem; }
+  @media screen and (max-width: 39.9375em) {
+    .modal {
+      border-radius: 0; } }
+  .modal .modal-header {
+    padding: 2rem 2rem 1rem;
+    border-bottom: 1px solid #efefef; }
+    .modal .modal-header .modal-title {
+      font-size: 1.2rem; }
+  .modal .modal-body {
+    padding: 2rem; }
+
 .callout.alert {
   border-color: #C44536; }
   .callout.alert h1, .callout.alert h2, .callout.alert h3, .callout.alert h4, .callout.alert h5, .callout.alert h6 {
@@ -4809,10 +4824,23 @@ blockquote {
   text-shadow: 0px 0px 10px #333; }
   @media screen and (max-width: 39.9375em) {
     .author .article-header {
+      margin-bottom: 16rem;
       padding: 6rem 1rem 1rem; } }
   .author .article-header .header-content {
     position: relative;
     left: calc(200px + 2rem); }
+    @media screen and (max-width: 63.9375em) {
+      .author .article-header .header-content {
+        left: calc(150px + 2rem); } }
+    @media screen and (max-width: 39.9375em) {
+      .author .article-header .header-content {
+        top: calc(200px + 2rem);
+        left: 0;
+        text-align: center; }
+        .author .article-header .header-content .display-name,
+        .author .article-header .header-content .storyteller-meta {
+          color: #0a0a0a;
+          text-shadow: none; } }
   .author .article-header .profile-photo {
     position: absolute;
     height: 200px;
@@ -4821,18 +4849,26 @@ blockquote {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    border: 0.5rem solid #fefefe;
+    border: 0.4rem solid #fefefe;
     border-radius: 2px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2); }
     @media screen and (max-width: 63.9375em) {
       .author .article-header .profile-photo {
-        height: 100px;
-        width: 100px; } }
+        height: 150px;
+        width: 150px; } }
+    @media screen and (max-width: 39.9375em) {
+      .author .article-header .profile-photo {
+        left: calc(50% - 100px);
+        height: 200px;
+        width: 200px; } }
   .author .article-header .display-name {
     margin: 0;
     padding: 0;
     color: #fefefe;
     border: none; }
+    @media screen and (max-width: 63.9375em) {
+      .author .article-header .display-name {
+        font-size: 2rem; } }
   .author .article-header .storyteller-meta {
     padding: 0;
     color: #fefefe;
@@ -4842,6 +4878,9 @@ blockquote {
     box-shadow: none; }
     .author .article-header .storyteller-meta a {
       color: #2bc2cc; }
+    @media screen and (max-width: 39.9375em) {
+      .author .article-header .storyteller-meta {
+        font-size: 1rem; } }
   .author .article-header .back {
     position: absolute;
     top: 2rem;

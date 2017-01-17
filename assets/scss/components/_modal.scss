@@ -1,0 +1,22 @@
+.modal {
+	padding: 0;
+	background-color: $white;
+	border-radius: 0.4rem;
+
+	@include breakpoint(small only) {
+		border-radius: 0;
+	}
+
+	.modal-header {
+		padding: 2rem 2rem 1rem;
+		border-bottom: 1px solid $light-gray;
+
+		.modal-title {
+			font-size: 1.2rem;
+		}
+	}
+
+	.modal-body {
+		padding: 2rem;
+	}
+}

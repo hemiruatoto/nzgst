@@ -24,12 +24,29 @@
 		text-shadow: 0px 0px 10px #333;
 
 		@include breakpoint(small only) {
+			margin-bottom: 16rem;
 			padding: 6rem 1rem 1rem;
 		}
 
 		.header-content {
 			position: relative;
 			left: calc(200px + 2rem);
+
+			@include breakpoint(medium down) {
+				left: calc(150px + 2rem);
+			}
+
+			@include breakpoint(small only) {
+				top: calc(200px + 2rem);
+				left: 0;
+				text-align: center;
+
+				.display-name,
+				.storyteller-meta {
+					color: $body-font-color;
+					text-shadow: none;
+				}
+			}
 		}
 
 		.profile-photo {
@@ -40,13 +57,19 @@
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: cover;
-			border: 0.5rem solid $white;
+			border: 0.4rem solid $white;
 			border-radius: $global-radius;
 			box-shadow: $global-shadow;
 
 			@include breakpoint(medium down) {
-				height: 100px;
-				width: 100px;
+				height: 150px;
+				width: 150px;
+			}
+
+			@include breakpoint(small only) {
+				left: calc(50% - 100px);
+				height: 200px;
+				width: 200px;
 			}
 		}
 
@@ -55,6 +78,10 @@
 			padding: 0;
 			color: $white;
 			border: none;
+
+			@include breakpoint(medium down) {
+				font-size: 2rem;
+			}
 		}
 
 		.storyteller-meta {
@@ -67,6 +94,10 @@
 
 			a {
 				color: lighten($primary-color, 20%);
+			}
+
+			@include breakpoint(small only) {
+				font-size: 1rem;
 			}
 		}
 

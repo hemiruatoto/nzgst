@@ -20,8 +20,10 @@ $stories_for_array = $curauth->nzgst_user_stories_for;
 
 if (sizeof($stories_for_array) > 1) {
 	$stories_for = 'Adults &amp; Children';
-} else {
+} else if (sizeof($stories_for_array) == 1){
 	$stories_for = ucfirst( $stories_for_array[0] );
+} else {
+	$stories_for = '';
 }
 
 $email = $curauth->nzgst_user_contact_email;
@@ -59,7 +61,7 @@ $linkedin_url = $curauth->nzgst_user_linkedin_url;
 			<!-- Contact buttons -->
 			<?php if ($booking_url || $phone || $email || $url) { ?>
 				<address class="contact info-section">
-					<button id="message-button" class="large expanded secondary button">Send A Message <i class="fa fa-paper-plane"></i></button>
+					<button id="message-button" class="large expanded secondary button" data-open="message-modal">Send A Message <i class="fa fa-paper-plane"></i></button>
 					<?php if ($website_url) { ?>
 						<a href="<?php echo $website_url; ?>" class="large expanded primary button" target="_blank">Visit Website <i class="fa fa-globe"></i></a>
 					<?php } ?>
@@ -119,5 +121,52 @@ $linkedin_url = $curauth->nzgst_user_linkedin_url;
 						
 	<footer class="article-footer">
 	</footer> <!-- end article footer -->
+
+	<!-- Modal for sending messages to the author -->
+	<section id="message-modal" class="modal reveal" data-reveal>
+
+		<button class="close-button" data-close aria-label="Close modal" type="button">
+			<span aria-hidden="true">&times;</span>
+		</button>
+
+		<header class="modal-header">
+			<h1 class="modal-title">Send a message to <?php echo $display_name; ?></h1>
+		</header>
+
+		<section class="modal-body">
+			<form action="">
+				<div class="row">
+					<div class="medium-6 columns">
+						<label for="message-name">
+							Your name
+							<input type="text" id="message-name" name="name">
+						</label>
+					</div>
+					<div class="medium-6 columns">
+						<label for="message-email">
+							Your email
+							<input type="text" id="message-email" name="email">
+						</label>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="medium-12 columns">
+						<label for="message-content">
+							Message
+							<textarea name="content" id="message-content" cols="30" rows="10"></textarea>
+						</label>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="medium-12 columns">
+						<input type="submit" class="secondary button" value="Send message">
+					</div>
+				</div>
+			</form>
+		</section><!-- end modal body -->
+		
+	</section><!-- end message modal -->
 
 </article>
